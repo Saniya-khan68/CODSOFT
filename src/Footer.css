@@ -1,0 +1,81 @@
+.footer{
+    background-color: black;
+    color:white;
+    padding: 60px 20px 30px;
+    font-family: cursive;
+    position: relative;
+    overflow: hidden;
+
+}
+.footer-container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+
+}
+.footer-left{
+    flex: 1;
+    min-width: 250px;
+
+}
+.footer-logo{
+    font-size: 28px;
+    font-weight: 700;
+    color: aquamarine;
+    text-shadow: 0 0 10px red;
+    margin-bottom: 12px;
+}
+.footer-desc{
+    font-size: 14px;
+    color: aquamarine;
+    line-height: 1.6;
+
+}
+.footer-links,
+.footer-contact{
+    flex: 1;
+min-width: 200px
+
+;
+}
+
+.footer-links h4
+.footer-contact h4{
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: red;
+    text-shadow: rosybrown;
+}
+
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+
+}
+.footer-links ul li{
+    margin-bottom: 10px;
+}
+.footer-contact p{
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: white;
+}
+.footer-bottom{
+    text-align: center;
+    padding-top:24px 
+    ;
+    border-top: 1px solid rgba(255, 255, 255,0.08);
+    font-size: 13px;
+    color: #888888;
+    margin-top: 40px;
+    position: relative
+    ;
+    z-index: 1;
+    font-size: 12px;
+    padding-top:20px ;
+}

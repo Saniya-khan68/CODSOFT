@@ -1,20 +1,25 @@
 import './App.css'
+import Footer from './Component/Footer';
+import Hero from './Component/Hero';
+ 
+import Navbar from './Component/Navbar';
+ 
+
 
 function App() {
 
   return (
     <>
-      <div className="card">
-        <button>
-          count is 10
-        </button>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <span>Saniya</span>
-    </>
-  )
-}
+      <div>
+        <Navbar />
+        <Hero />
+        <Footer />
+        
 
-export default App
+      </div>
+       
+    </>
+  );
+};
+
+export default App;

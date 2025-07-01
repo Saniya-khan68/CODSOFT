@@ -1,0 +1,43 @@
+.hero{
+    background-color: black;
+    padding: 130px 20px;
+    text-align: center;
+    position: relative
+    ;
+    overflow:hidden;
+    font-family: 'poppins',sans-serif;
+    color: white;
+}
+.hero-title{
+    font-size: 54px;
+    font-weight: 800;
+    background-color: red;
+    margin-bottom: 20px;
+    position: relative
+    ;
+    z-index: 1;
+    text-shadow: 0 0 12px purple;
+}
+.hero-subtitle{
+    font-size: 18px;
+    color: red;
+        max-width: 640px;
+        margin: 0;
+        line-height: 1.7;
+    z-index: 1;
+    position: relative;
+}
+.hero-btn{
+    background-color: red;
+    color: black;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+.hero-btn:hover{
+    background-color: indianred;
+}
