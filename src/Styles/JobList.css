@@ -1,0 +1,113 @@
+.job-list-container {
+    padding: 60px 20px;
+    background: radial-gradient(to right, #f0f2f5, #e3e9f0);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    text-align: center;
+
+}
+
+.job-list-container h2 {
+    font-size: 32px;
+    color: #2c2c54;
+    margin-bottom: 40px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.job-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.job-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+
+
+
+}
+
+.job-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border-color: #ccc;
+}
+
+.job-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1a1a3d;
+}
+
+.job-card p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #444;
+}
+
+.job-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 18px;
+
+}
+
+.job-buttons .btn-view,
+.job-buttons .btn-apply {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-view {
+    background-color: transparent;
+    color: #4a3aff;
+    border: 2px solid #4a3aff;
+
+}
+
+.btn-view:hover {
+    background-color: #4a3aff;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(74, 58, 255, 0.3);
+
+}
+
+.btn-apply {
+    background-color: #4a3aff;
+    color: white;
+    border: 2px solid #4a3aff;
+}
+
+.btn-apply:hover {
+    background-color: #362ccc;
+    border-color: #362ccc;
+    box-shadow: 0 4px 12px rgba(54, 44, 204, 0.3);
+}
+
+@media (max-width: 768px) {
+    .job-card {
+        width: 100%;
+
+    }
+
+    .job-buttons {
+        flex-direction: column;
+    }
+
+    .btn-view,
+    .btn-apply {
+        width: 100%;
+    }
+}

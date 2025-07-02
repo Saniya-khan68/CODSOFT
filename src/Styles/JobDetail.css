@@ -1,0 +1,45 @@
+.job-detail-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    font-family: 'Poppins', sans-serif;
+}
+
+.job-detail-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00c6ff;
+    text-shadow: 0 0 4px rgba(0, 198, 255, 0.5);
+}
+
+.job-detail-container p {
+    font-size: 16px;
+    margin-bottom: 12px;
+
+
+}
+
+.job-detail-container strong {
+    color: #ffffff;
+
+}
+
+.apply-button {
+    margin-top: 20px;
+    background-color: #00c6ff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #00c6ff;
+}

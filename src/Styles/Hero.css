@@ -6,12 +6,32 @@
     ;
     overflow:hidden;
     font-family: 'poppins',sans-serif;
-    color: white;
+    color:#ffffff;
+}
+
+.hero::before{
+    content: ''
+    ;
+    position: absolute;
+    top:-80px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #00fff7 0%,
+    transparent 70%);
+    opacity: 0.1;
+    filter: blur(120px)
+    ;
+    z-index: 0;
+    pointer-events: none;
+
 }
 .hero-title{
     font-size: 54px;
     font-weight: 800;
-    background-color: red;
+    background:linear-gradient(90deg, #00fff7, #0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
     position: relative
     ;
@@ -20,16 +40,16 @@
 }
 .hero-subtitle{
     font-size: 18px;
-    color: red;
+    color:#cccccc;
         max-width: 640px;
-        margin: 0;
+        margin: 0 auto 40px;
         line-height: 1.7;
     z-index: 1;
     position: relative;
 }
 .hero-btn{
-    background-color: red;
-    color: black;
+    background-color: #00fff7;
+    color: #0b0f13;
     padding: 14px 36px;
     border: none;
     border-radius: 50px;
@@ -37,7 +57,36 @@
     font-weight: 600;
     cursor: pointer;
     position: relative;
+    transition: all 0.3s ease;
+    z-index: 1;
 }
 .hero-btn:hover{
-    background-color: indianred;
+    background-color: 0 0 28px rgba(0, 255, 255, 0.7)
+
+}
+
+@media (max-width: 768px){
+    .hero{
+        padding: 100px 15px;
+        
+    }
+    .hero-title{
+        font-size: 32px;
+    }
+    .hero-subtitle{
+        font-size: 16px;
+
+    }
+    .hero-btn{
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+
+    .hero::before{
+        top: -80px;
+        left: -120px;
+        width: 300px;
+        height: 300px;
+        filter: blur(100px);
+    }
 }
