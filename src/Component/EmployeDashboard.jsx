@@ -47,7 +47,7 @@ const EmployeDashboard = ({ user }) => {
 
           <input type="text"
             name="title"
-            placeholder='Job title'
+            placeholder='Job Title'
             value={job.title}
             onChange={handleChange}
             required />
@@ -55,7 +55,7 @@ const EmployeDashboard = ({ user }) => {
           <input
             type='text'
             name='company'
-            placeholder='Company name'
+            placeholder='Company Name'
 
             value={job.company}
             onChange={handleChange}

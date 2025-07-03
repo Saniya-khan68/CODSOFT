@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../Styles/Navbar.css';
-import { useNavigate } from 'react-router-dom';
+
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Navbar = ({ onSearch, isAuthenticated, setIsAuthenticated }) => {
    const [search, setSearch] = useState('');
@@ -18,7 +20,7 @@ const Navbar = ({ onSearch, isAuthenticated, setIsAuthenticated }) => {
       localStorage.removeItem('user');
       setIsAuthenticated(false);
       navigate('/login');
-   }
+   };
 
 
    return (

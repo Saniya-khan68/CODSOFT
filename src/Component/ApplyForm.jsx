@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom';
+import '../Styles/ApplyForm.css';
 
 const ApplyForm = () => {
     const { id } = useParams();
-    const [fullName, setFullName] = useState("");
-    const [email, setEmail] = useState("");
+    const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
     const [resume, setResume] = useState(null);
     const [submitted, setSubmitted] = useState(false);
 
     const handleFileChange = (e) => {
-        setResume(e.target.files[0]);
+       
+        setResume(e.target.value[0]);
     };
 
     const handleSubmit = (e) => {
@@ -49,7 +51,7 @@ const ApplyForm = () => {
                         Upload Resume:
                         <input
                             type='file'
-                            accept='pdf,.doc,.docx'
+                            accept=".pdf , .doc, .docx"
                             onChange={handleFileChange}
                             required />
                     </label>

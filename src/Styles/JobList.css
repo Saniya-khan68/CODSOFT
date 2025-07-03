@@ -29,6 +29,9 @@
     box-shadow: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid transparent;
 
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
 
 
 }

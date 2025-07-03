@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Styles/Footer.css'
 
 const Footer = () => {
     return (
@@ -13,7 +14,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className="footer-links">
-                    <h4>Quick-links</h4>
+                    <h4>Quick~links</h4>
                     <ul >
                         <li><a href="/">Home</a> </li>
                         <li><a href="/jobs">Jobs</a> </li>

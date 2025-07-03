@@ -1,13 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '..styles/login.css'
+import { Link } from "react-router-dom";
+
+import '../Styles/Login.css'
 
 
 const Login = ({ setIsAuthenticated }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [userType, setUserType] = useState('candidate');
+    const [userType, setUserType] = useState('Candidate');
     const navigate = useNavigate();
 
 
@@ -22,7 +24,7 @@ const Login = ({ setIsAuthenticated }) => {
         } else {
             navigate('/candidate')
         }
-    };
+    }; 1
     return (
         <div className='login-container'>
             <form className='login-form' onSubmit={handleSubmit}>
@@ -56,7 +58,8 @@ const Login = ({ setIsAuthenticated }) => {
                 <button type='submit'>Login</button>
                 <p className='signup-text'>
                     Don't have an account?
-                    <a href="/signup"> Signup</a>
+                    <Link to="/signup">Signup</Link>
+
                 </p>
             </form>
 

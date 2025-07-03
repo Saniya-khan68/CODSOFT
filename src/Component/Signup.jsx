@@ -24,7 +24,7 @@ const Signup = () => {
         e.preventDefault();
 
         if (formData.password !== formData.confirmPassword) {
-            alert("Password do not match");
+            alert("Password do not match..");
             return;
 
         }

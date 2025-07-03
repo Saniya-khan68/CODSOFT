@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './Styles/JobList.css'
+import '../Styles/JobList.css';
 
 const jobs = [
     {
@@ -25,8 +25,13 @@ const jobs = [
         company: " Amazon",
         location: " Delhi, India",
         salary: "₹10 LPA"
+    }, {
+        id: 4,
+        title: "  Data Scientist",
+        company: " IBM",
+        location: " Mumbai, India",
+        salary: "₹18 LPA"
     }
-
 
 ];
 const JobList = ({ searchTerm = '' }) => {
@@ -44,38 +49,38 @@ const JobList = ({ searchTerm = '' }) => {
             <div className="job-cards">
                 {filteredJobs.length > 0 ? (
                     filteredJobs.map((job) => (
-                        
+
                         <div className="job-card" key={job.id}>
                             <h3>{job.title}</h3>
                             <p><strong>Company:</strong>{job.company}</p>
                             <p><strong>Location</strong>{job.location}</p>
                             <p><strong>Salary</strong>
-                            {job.salary}</p>
+                                {job.salary}</p>
+
+
+
+
+                            <div className="job-buttons">
+                                <Link to={`/jobs/${job.id}`}>
+                                    <button className="btn-view">View Details</button>
+                                </Link>
+                                <Link to={`/apply/${job.id}`}>
+                                    <button className="btn-apply">Apply Now</button>
+                                </Link>
+                            </div>
+
+
+
                         </div>
-                        
 
 
-                        <div className="job-buttons">
-                            <Link to={`/jobs/${job.id}`}>
-                  <button className="btn-view">View Details</button>
-                </Link>
-                <Link to={`/apply/${job.id}`}>
-                  <button className="btn-apply">Apply Now</button>
-                </Link>
-                        </div>
-                        
-
-
-                        </div>
-
-
-            )):
-            ):(
-            <p>No matching jobs found.</p>
+                    ))
+                ) : (
+                    <p>No matching jobs found.</p>
                 )}
-        </div>
+            </div>
         </div >
     );
- };
+};
 
 export default JobList;

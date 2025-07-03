@@ -1,121 +1,149 @@
-.employer-dashboard{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+.employer-dashboard {
     padding: 40px 20px;
-    font-family: 'Popppins','sans-serif';
-    background-color: palevioletred;
-    color: black;
-    min-height: 100h;
+    font-family: 'Popppins', 'sans-serif';
+    background-color: #0b0f13;
+    color: #ffffff;
+    min-height: 100vh;
 
 }
-.employer-dashboard h2{
- font-size: 30px;
- margin-bottom: 30px;
- text-align: center;
- color: wheat;
- text-shadow: 0 0 10px rebeccapurple;
+
+.employer-dashboard h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #00fff7;
+    text-shadow: 0 0 10px #00fff7;
 }
 
-.job-post-form{
+.job-post-form {
     margin: 0 auto 50px;
     background-color: linear-gradient(to right, #121a24, #0e141b);
     padding: 30px 24px;
-    border-radius: 14px;
-    box-shadow: 0 0 20px rgba(0, 255, 255,0.1);
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
     max-width: 700px;
-    border: 1px solid red;
+    border: 1px solid #00fff7;
     transition: all 0.3s ease;
 }
-.job-post-form h3{
+
+.job-post-form h3 {
     font-size: 24px;
-    color: #000
-    ;
+    color: #00fff7;
     margin-bottom: 24px;
     text-align: center;
-    text-shadow:  0 0 8px peru;
+    text-shadow: 0 0 8px #00fff7;
 
 }
-.job-post-form form{
-    display:flex;
+
+.job-post-form form {
+    display: flex;
     flex-direction: column;
     gap: 18px;
 }
+
 .job-post-form input,
-.job-post-form textarea{
+.job-post-form textarea {
     padding: 12px 16px;
-    border: 1px solid rgba(0, 255, 255,0.1);
+    border: 1px solid #1f2a36;
     border-radius: 10px;
     font-size: 16px;
-    background-color: rosybrown;
-    color: black;
+    background-color: #101820;
+    color: #ffffff;
     transition: 0.2s ease;
     outline: none;
 }
-.job-post-form button{
+
+.job-post-form input:focus,
+.job-post-form textarea:focus {
+    border-color: #00fff7;
+    box-shadow: 0 0 8px #00fff7;
+}
+
+
+.job-post-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.job-post-form button {
     align-self: flex-start;
     padding: 12px 24px;
-    background-color: chocolate;
-    color: #000
-    ;
+    background-color: #00fff7;
+    color: #0a0a0a;
     border: none;
     border-radius: 8px;
-    cursor: pointer
-    ;
+    cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.job-post-form button:hover{
-    background-color: peru;
-    box-shadow:  0 0 12px #00fff7;
+.job-post-form button:hover {
+    background-color: #0ff;
+    box-shadow: 0 0 12px #00fff7;
 }
-.posted-jobs{
+
+.posted-jobs {
     max-width: 700px;
-    margin:  0 auto;
+    margin: 0 auto;
 }
-.posted-jobs h3{
+
+.posted-jobs h3 {
     font-size: 22px;
     margin-bottom: 20px;
     text-align: center;
-    color: #0e141b;
-    text-shadow:  0 0 8px #00fff7;
+    color: #00fff7;
+    text-shadow: 0 0 8px #00fff7;
 }
 
-.posted-jobs ul{
+.posted-jobs ul {
     list-style: none;
-    ;
-
     padding: 0;
 
 }
-.posted-jobs li{
-    background-color: aquamarine;
-    padding: 
-    18;
+
+.posted-jobs li {
+    background-color: #121a24;
+    padding: 18px;
     margin-bottom: 14px;
     border-radius: 10px;
-    border-left:4px solid #00fff7;
-    box-shadow:  0 0 10px rgba(0,255,255,0.05);
+    border-left: 4px solid #00fff7;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
 
 }
-.posted-jobs li p{
+
+.posted-jobs li h4 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #cccccc;
+
+}
+
+.posted-jobs li p {
     margin: 4px 0;
     font-size: 14px;
-    color: white;
+    color: #cccccc;
 }
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
+
     .job-post-form,
-    .posted-jobs{
+    .posted-jobs {
         padding: 20px 16px;
     }
+
     .job-post-form h3,
-    .posted-jobs h3{
+    .posted-jobs h3 {
         font-size: 20px;
     }
 
     .job-post-form input,
-    .job-post-form textarea{
+    .job-post-form textarea {
         font-size: 15px;
     }
-    .employer-dashboard h2{
+
+    .employer-dashboard h2 {
         font-size: 24px;
     }
 }

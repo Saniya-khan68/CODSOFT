@@ -15,6 +15,29 @@ const CandidateDashboard = ({ user }) => {
                 company: 'Designify',
                 location: 'Bangalore',
                 status: 'Interview Scheduled'
+            },
+            {
+                title: 'Full Stack Developer',
+                company: 'Tech Innovators',
+                location: 'Remote',
+                status: 'under Review'
+            },
+            {
+                title: 'Data Scientist',
+                company: 'Data Science Inc.',
+                location: 'New York',
+                status: 'Interview Scheduled'
+            },
+            {
+                title: 'Backend Developer',
+                company: 'Tech Innovators',
+                location: 'Remote',
+                status: 'under Review'
+            }, {
+                title: 'Full Stack Developer',
+                company: 'Tech Innovators',
+                location: 'Remote',
+                status: 'under Review'
             }
         ]
     )
@@ -35,9 +58,9 @@ const CandidateDashboard = ({ user }) => {
                 {appliedJobs.map((job, index) => (
                     <div className="job-card" key={index}>
                         <h3>{job.title}</h3>
-                        <p><strong>Company : </strong>{job.company}</p>
+                        <p><strong>Company: </strong>{job.company}</p>
                         <p><strong>Location:</strong>{job.location}</p>
-                        <p><strong>Status :</strong> <span className='status'>{job.status}</span> </p>
+                        <p><strong>Status:</strong> <span className='status'>{job.status}</span> </p>
                     </div>
 
 
