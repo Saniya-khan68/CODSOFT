@@ -1,26 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
 .employer-dashboard {
     padding: 40px 20px;
-    font-family: 'Popppins', 'sans-serif';
+    font-family: 'Poppins', sans-serif;
     background: radial-gradient(circle at top left, #1a1a2e, #0b0f13);
     color: #ffffff;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-
 }
 
 .employer-dashboard h2 {
     font-size: 34px;
-
-    background: linear-gradient(90deg, #00fff7, #ff00ff);
-    --webkit-background-clip: text;
-    --webkit-text-fill-color: transparent;
-    z-index: 1;
     text-align: center;
-    color: #00fff7;
+    background: linear-gradient(90deg, #00fff7, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px #00fff7;
+    margin-bottom: 30px;
+}
+
+.employer-dashboard p {
+    text-align: center;
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 40px;
 }
 
 .job-post-form {
@@ -32,20 +36,17 @@
     border: 1px solid rgba(0, 255, 255, 0.1);
     backdrop-filter: blur(12px);
     max-width: 700px;
-    z-index: 1;
     transition: all 0.3s ease;
 }
 
 .job-post-form h3 {
     font-size: 24px;
+    text-align: center;
     background: linear-gradient(90deg, #00fff7, #ff00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    margin-bottom: 24px;
-    text-align: center;
     text-shadow: 0 0 8px #00fff7;
-
+    margin-bottom: 24px;
 }
 
 .job-post-form form {
@@ -72,7 +73,6 @@
     box-shadow: 0 0 8px #00fff7;
 }
 
-
 .job-post-form textarea {
     resize: vertical;
     min-height: 100px;
@@ -87,19 +87,18 @@
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+    font-size: 16px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 12px #00fff7;
 }
 
 .job-post-form button:hover {
-
-    box-shadow: 0 0 12px #ff00ff;
+    box-shadow: 0 0 18px #ff00ff;
 }
 
 .posted-jobs {
     max-width: 700px;
     margin: 0 auto;
-    z-index: 1;
     position: relative;
 }
 
@@ -116,25 +115,28 @@
 .posted-jobs ul {
     list-style: none;
     padding: 0;
-
 }
 
 .posted-jobs li {
     background: rgba(255, 255, 255, 0.05);
     padding: 18px;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
     border-radius: 10px;
     border-left: 4px solid #00fff7;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
     backdrop-filter: blur(8px);
+    transition: transform 0.2s ease;
+}
 
+.posted-jobs li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 16px rgba(0, 255, 255, 0.2);
 }
 
 .posted-jobs li h4 {
     margin: 0 0 8px;
     font-size: 18px;
     color: #ffffff;
-
 }
 
 .posted-jobs li p {
@@ -144,7 +146,6 @@
 }
 
 @media (max-width: 768px) {
-
     .job-post-form,
     .posted-jobs {
         padding: 20px 16px;

@@ -37,7 +37,8 @@ const Navbar = ({ onSearch, isAuthenticated, setIsAuthenticated }) => {
                <li><Link to="/">Home</Link> </li>
                <li><Link to="jobs">Jobs</Link> </li>
                <li><Link to="employer">Employers</Link> </li>
-               <li><Link to="candidate"></Link>Candidates</li>
+                <li><Link to="/candidate">Candidates</Link></li>
+
 
 
                {isAuthenticated ? (
