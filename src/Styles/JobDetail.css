@@ -1,45 +1,91 @@
+:root {
+    --neon-blue: #00eaff;
+    --neon-pink: #ff00d4;
+    --neon-purple: #8a2be2;
+    --bg-dark: #0a0c1b;
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --white: #ffffff;
+    --gray: #bbbbbb;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0a0c1b, #1c1e3a);
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.12), transparent 50%),
+        radial-gradient(circle at 70% 25%, rgba(0, 255, 255, 0.12), transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(255, 255, 0, 0.08), transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
 .job-detail-container {
     max-width: 800px;
     margin: 60px auto;
-    padding: 30px;
-    background-color: #1e1e1e;
-    color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    background: var(--glass-bg);
+    border: 1px solid rgba(0, 234, 255, 0.2);
+
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     font-family: 'Poppins', sans-serif;
+    backdrop-filter: blur(12px);
+    position: relative;
 }
 
 .job-detail-container h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #00c6ff;
-    text-shadow: 0 0 4px rgba(0, 198, 255, 0.5);
+    background: linear-gradient(to right, var(--neon-pink), var(--neon-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+    text-align: center;
 }
 
 .job-detail-container p {
     font-size: 16px;
     margin-bottom: 12px;
+    color: var(--gray);
+    line-height: 1.6;
 
 
 }
 
 .job-detail-container strong {
-    color: #ffffff;
+    color: var(--white);
 
 }
 
 .apply-button {
     margin-top: 20px;
-    background-color: #00c6ff;
-    color: #000000;
-    padding: 10px 20px;
+    display: inline-block;
+
+    background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
+    color: #ffffff;
+    padding: 10px 28px;
     border: none;
     font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 12px rgba(0, 234, 255, 0.2);
 }
 
 .apply-button:hover {
-    background-color: #00c6ff;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+
 }

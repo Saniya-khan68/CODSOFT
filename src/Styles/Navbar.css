@@ -10,11 +10,13 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background: #0b0f13;
+    background: rgba(20,20,40,0.6);
+   backdrop-filter: blur(8px);
     overflow: hidden;
     width: 100%;
     z-index: 999;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar-blur-bg {
@@ -39,7 +41,7 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    z-index: 1;
+   
 }
 
 .logo {
@@ -51,15 +53,15 @@ body {
 .logo-link {
     font-size: 2 rem;
     font-weight: 700;
-    color: #00fff7;
+    color: #f472b6;
     text-decoration: none;
-    text-shadow: 0 0 10px #00fff7;
+    text-shadow: 0 0 8px  #f472b6;
 
 }
 
 .tagline {
     font-size: 0.75rem;
-    color: #bbb;
+    color: #cbd5e1;
     margin-top: 4px;
     letter-spacing: 1px;
 }
@@ -75,40 +77,41 @@ body {
 
 .nav-links li a,
 .nav-links li button.logout-btn {
-    color: #ffffff;
+    color: #f1f5f9;
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
-    transition: none;
+    transition: all 0.3s ease;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 8px;
+    position: relative;
 }
 
 .nav-links li a:hover,
 .nav-links li button.logout-btn:hover {
-    color: #00fff7;
-    text-shadow: 0 0 8px #00fff7;
+    color: #38dbf8;
+    text-shadow: 0 0 8px #38dbf8;
 }
 
 .search-box {
     display: flex;
     align-items: center;
-    background-color: black;
-    border: 1px solid #00fff7;
-
-    border-radius: 10px;
-    overflow: hidden;
-    height: 38px;
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid  rgba(255,255,255,0.15);border-radius: 20px;
+    
+    height: 36px;
     margin-left: 20px;
-    box-shadow: 0 0 10px #00fff7;
+    /* box-shadow: 0 0 10px #00fff7; */
 }
 
 .search-box input {
     border: none;
     background: transparent;
     padding: 10px 12px;
-    color: white;
+    color: #e5e7eb;
     font-size: 1rem;
     width: 160px;
     outline: none;
@@ -116,15 +119,15 @@ body {
 
 
 .search-box button {
-    background-color: #00fff7;
+    background: none;
     border: none;
-    color: #0a0a0a;
-    padding: 0 14px;
+    color:  #60a5fa;
+    padding: 4px 8px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition:  color 0.3s ;
     font-size: 1rem;
 }
 
 .search-box button:hover {
-    background: #0ff;
+    background: #3b82f6;
 }

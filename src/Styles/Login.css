@@ -1,104 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-.login-container{
+:root {
+    --neon-blue: #00eaff;
+    --neon-purple: #8a2be2;
+    --bg-dark: #0b0f13;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --input-bg: #101820;
+    --border-glow: #00fff7;
+}
+
+.login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    background-color: #0b0f13;
+    background: linear-gradient(145deg, #0b0f13, #151e29);
     padding: 20px;
-    font-family: 'poppins',sans-serif;
+    font-family: 'poppins', sans-serif;
     color: #ffffff;
-    position: relative
-    ;
+    position: relative;
     overflow: hidden;
 }
-.login-container::before{
+
+.login-container::before,
+.login-container::after {
     content: '';
     position: absolute;
-    top:-100px;
-    left: -100px;
-    width: 400px;
-    height: 400px;
-    background-color: radial-gradient(circle, #00fff7 0% transparent 70%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
+    filter: blur(120px);
     opacity: 0.1;
-    filter: blur(100px);
+
     pointer-events: none;
     z-index: 0;
 
 }
-.login-form{
-    background-color: #121a24;
+
+.login-container::after {
+    top: 70%;
+    left: 60%;
+    background: radial-gradient(circle, var(--neon-blue) 0%, transparent 70%);
+}
+
+.login-form {
+    background-color: var(--glass-bg);
     padding: 40px 30px;
     border-radius: 16px;
-    box-shadow:  0 0 20px rgba(0,  255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
     width: 100%;
     max-width: 400px;
-    position: relative
-    ;
+    position: relative;
     z-index: 1;
-    border: 1px solid #00fff7;
+    border: 1px solid var(--border-glow);
+    backdrop-filter: blur(10px);
 
 }
-.login-form h2{
+
+.login-form h2 {
     text-align: center;
     margin-bottom: 24px;
-    color: #00fff7;
-    font-size: 24px;
-    text-shadow:  0 0 8px #00fff7;
+    margin-bottom: 24px;
+    background: linear-gradient(90deg, var(--neon-purple),
+            var(--neon-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    ;
+    font-size: 26px;
+    text-shadow: 0 0 8px var(--neon-blue);
 }
-.login-form label{
+
+.login-form label {
     display: block;
     margin-bottom: 6px;
     font-weight: 500;
     color: #cccccc;
 }
+
 .login-form input,
-.login-form select{
+.login-form select {
     width: 100%;
     padding: 12px;
     margin-bottom: 18px;
     border: 1px solid #1f2a36;
     border-radius: 8px;
     font-size: 15px;
-    background-color: #101820;
-    color:#ffffff;
+    background-color: var(--input-bg);
+    color: #ffffff;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .login-form input:focus,
-.login-form select:focus{
-    border-color: #00fff7;
-    box-shadow: 0 0 8px #00fff7;
+.login-form select:focus {
+    border-color: var(--border-glow);
+    box-shadow: 0 0 10px var(--border-glow);
     outline: none;
 }
 
-.login-form button{
+.login-form button {
     width: 100%;
 
     padding: 12px;
-    background-color: #00fff7;
-    color: #0a0a0a;
+    background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
-.login-form button:hover{
-    background-color: #00fff7;
-    box-shadow: 0 0 12px #00fff7;
+
+.login-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--neon-blue);
 }
-.signup-text{
+
+.signup-text {
     text-align: center;
     font-size: 14px;
     margin-top: 12px;
     color: #cccccc;
 }
-.signup-text a{
-    color:#00fff7;
+
+.signup-text a {
+    color: var(--neon-blue);
     text-decoration: none;
     font-weight: 500;
-    text-shadow:  0 0 6px #00fff7;
+    text-shadow: 0 0 6px var(--neon-blue);
 }
