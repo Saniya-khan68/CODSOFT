@@ -13,6 +13,7 @@ import Login from './Component/Login';
 import JobDetail from './Component/JobDetail';
 
 import Profile from './Component/Profile';
+import EditProfile from './Component/EditProfile';
 
 
 
@@ -104,6 +105,15 @@ function App() {
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
               <Profile />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/edit-profile"
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <EditProfile />
             </ProtectedRoute>
           }
         />

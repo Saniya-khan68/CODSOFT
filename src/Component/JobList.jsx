@@ -31,6 +31,93 @@ const jobs = [
         company: " IBM",
         location: " Mumbai, India",
         salary: "₹18 LPA"
+    },
+    {
+        id: 1,
+        title: "Fronted developer",
+        company: " Google",
+        location: "Bangalore, India",
+        salary: "₹12 LPA"
+
+    },
+
+    {
+        id: 2,
+        title: "Backend developer",
+        company: " Microsoft",
+        location: "Hyderabad, India",
+        salary: "₹14 LPA"
+    },
+    {
+        id: 3,
+        title: "  Data Analyst",
+        company: " Amazon",
+        location: " Delhi, India",
+        salary: "₹10 LPA"
+    }, {
+        id: 4,
+        title: "  Data Scientist",
+        company: " IBM",
+        location: " Mumbai, India",
+        salary: "₹18 LPA"
+    },
+    {
+        id: 1,
+        title: "Fronted developer",
+        company: " Google",
+        location: "Bangalore, India",
+        salary: "₹12 LPA"
+
+    },
+
+    {
+        id: 2,
+        title: "Backend developer",
+        company: " Microsoft",
+        location: "Hyderabad, India",
+        salary: "₹14 LPA"
+    },
+    {
+        id: 3,
+        title: "  Data Analyst",
+        company: " Amazon",
+        location: " Delhi, India",
+        salary: "₹10 LPA"
+    }, {
+        id: 4,
+        title: "  Data Scientist",
+        company: " IBM",
+        location: " Mumbai, India",
+        salary: "₹18 LPA"
+    },
+    {
+        id: 1,
+        title: "Fronted developer",
+        company: " Google",
+        location: "Bangalore, India",
+        salary: "₹12 LPA"
+
+    },
+
+    {
+        id: 2,
+        title: "Backend developer",
+        company: " Microsoft",
+        location: "Hyderabad, India",
+        salary: "₹14 LPA"
+    },
+    {
+        id: 3,
+        title: "  Data Analyst",
+        company: " Amazon",
+        location: " Delhi, India",
+        salary: "₹10 LPA"
+    }, {
+        id: 4,
+        title: "  Data Scientist",
+        company: " IBM",
+        location: " Mumbai, India",
+        salary: "₹18 LPA"
     }
 
 ];

@@ -43,6 +43,7 @@ const Navbar = ({ onSearch, isAuthenticated, setIsAuthenticated }) => {
                {isAuthenticated ? (
                   <>
                      <li><Link to="/profile">Profile</Link> </li>
+                     <li><Link to="/edit-profile"> Edit Profile</Link></li>
                      <li><button className='logout-btn' onClick={handleLogout}>Logout</button></li>
                   </>
                ) : (
