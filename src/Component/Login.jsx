@@ -24,7 +24,7 @@ const Login = ({ setIsAuthenticated }) => {
         } else {
             navigate('/candidate')
         }
-    }; 1
+    }; 
     return (
         <div className='login-container'>
             <form className='login-form' onSubmit={handleSubmit}>

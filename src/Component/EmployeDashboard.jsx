@@ -1,4 +1,6 @@
- import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
+
 import '../Styles/EmployeDashboard.css';
 
 const EmployeDashboard = ({ user }) => {
@@ -12,13 +14,33 @@ const EmployeDashboard = ({ user }) => {
 
   const [postedJobs, setPostedJobs] = useState([]);
 
+  useEffect(() => {
+    if (user?.email) {
+      const allJobs = JSON.parse(localStorage.getItem('jobsByEmployer')) || {};
+      const employerJobs = allJobs[user.email] || [];
+      setPostedJobs(employerJobs);
+    }
+  }, [user]);
+
   const handleChange = (e) => {
     setJob({ ...job, [e.target.name]: e.target.value });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setPostedJobs([...postedJobs, job]);
+    const newJob = {
+      ...job,
+      postedAt: new Date().toLocaleString(),
+    };
+
+    const allJobs = JSON.parse(localStorage.getItem('jobsByEmployer')) || {};
+    const existing = allJobs[user.email] || [];
+    const updated = [...existing, newJob];
+    allJobs[user.email] = updated;
+    localStorage.setItem('jobsByEmployer', JSON.stringify(allJobs));
+    setPostedJobs(updated);
+
     setJob({
       title: '',
       company: '',
@@ -28,8 +50,22 @@ const EmployeDashboard = ({ user }) => {
     });
   };
 
+  const handleDelete = (indexToRemove) => {
+    const updated = postedJobs.filter((_, index) => index !== indexToRemove);
+    const allJobs = JSON.parse(localStorage.getItem('jobsByEmployer')) || {};
+    allJobs[user.email] = updated;
+    localStorage.setItem('jobsByEmployer', JSON.stringify(allJobs));
+    setPostedJobs(updated);
+  };
+
+
   return (
     <div className='employer-dashboard'>
+
+      <div className='neon-shape shape1'></div>
+      <div className='neon-shape shape2'></div>
+
+
       <h2>Employer Dashboard</h2>
       {user ? (
         <p>
@@ -99,8 +135,12 @@ const EmployeDashboard = ({ user }) => {
           <ul>
             {postedJobs.map((j, index) => (
               <li key={index}>
-                <strong>{j.title}</strong> at <em>{j.company}</em> ({j.location}) – ₹{j.salary}
-                <p>{j.description}</p>
+                <h4>{j.title} at {j.company}</h4>
+                <p><strong>Location:</strong> {j.location}</p>
+                <p><strong>Salary:</strong> {j.salary}</p>
+                <p><strong>Description:</strong> {j.description}</p>
+                <p><em>Posted on: {j.postedAt}</em></p>
+                <button onClick={() => handleDelete(index)}>🗑️ Delete</button>
               </li>
             ))}
           </ul>

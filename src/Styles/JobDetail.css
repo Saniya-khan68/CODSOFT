@@ -1,91 +1,108 @@
 :root {
-    --neon-blue: #00eaff;
-    --neon-pink: #ff00d4;
-    --neon-purple: #8a2be2;
-    --bg-dark: #0a0c1b;
-    --glass-bg: rgba(255, 255, 255, 0.04);
-    --white: #ffffff;
-    --gray: #bbbbbb;
+  --neon-blue: #00eaff;
+  --neon-pink: #ff00d4;
+  --neon-purple: #8a2be2;
+  --bg-dark: #0a0c1b;
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --white: #ffffff;
+  --gray: #bbbbbb;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #0a0c1b, #1c1e3a);
-    font-family: 'Poppins', sans-serif;
-    color: var(--white);
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--bg-dark), #1c1e3a);
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  overflow-x: hidden;
 }
 
 body::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.12), transparent 50%),
-        radial-gradient(circle at 70% 25%, rgba(0, 255, 255, 0.12), transparent 50%),
-        radial-gradient(circle at 50% 80%, rgba(255, 255, 0, 0.08), transparent 50%);
-    z-index: -1;
-    pointer-events: none;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.12), transparent 50%),
+    radial-gradient(circle at 70% 25%, rgba(0, 255, 255, 0.12), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(255, 255, 0, 0.08), transparent 50%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .job-detail-container {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 40px;
-    background: var(--glass-bg);
-    border: 1px solid rgba(0, 234, 255, 0.2);
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background: var(--glass-bg);
+  border: 1px solid rgba(0, 234, 255, 0.2);
 
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    font-family: 'Poppins', sans-serif;
-    backdrop-filter: blur(12px);
-    position: relative;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
+  backdrop-filter: blur(12px);
+  position: relative;
 }
 
-.job-detail-container h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    background: linear-gradient(to right, var(--neon-pink), var(--neon-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
-    text-align: center;
+h1,
+h2,
+h3 {
+  background: linear-gradient(to right, var(--neon-pink), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.job-detail-container p {
-    font-size: 16px;
-    margin-bottom: 12px;
-    color: var(--gray);
-    line-height: 1.6;
-
-
+p {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 14px;
 }
 
-.job-detail-container strong {
-    color: var(--white);
-
+strong {
+  color: var(--white);
 }
 
 .apply-button {
-    margin-top: 20px;
-    display: inline-block;
-
-    background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
-    color: #ffffff;
-    padding: 10px 28px;
-    border: none;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 12px rgba(0, 234, 255, 0.2);
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 234, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 .apply-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
 
+}
+
+.container {
+  max-width: 1200px;
+  padding: 20px;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.text-neon {
+  color: var(--neon-blue);
+}
+
+.shadowed {
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.1);
 }

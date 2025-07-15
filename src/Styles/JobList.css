@@ -1,155 +1,169 @@
-.job-list-container {
-    padding: 60px 20px;
-    background: radial-gradient(circle at top left #1a1a2e, #0b0f13);
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-}
+ :root {
+     --bg-dark: #0e0e0e;
+     --card-bg: #111111;
+     --input-bg: #2a2a2a;
+     --border-color: #444;
+     --white: #ffffff;
+     --gray: #c4c4c4;
+     --light-gray: #dcdcdc;
+     --accent: #00ffd5;
+     --accent-hover: #00e1c0;
+ }
 
-.job-list-container::before,
-.job-list-container::after {
-    content: ''
-    ;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(0, 255, 247, 0.2), transparent);
-    filter: blur();
-    z-index: 0;
+ body {
+     background-color: var(--bg-dark);
+     color: var(--white);
+     font-family: 'Poppins', sans-serif;
+     margin: 0;
+     padding: 0;
+ }
 
+ .job-list-container {
+     padding: 40px 20px;
+     max-width: 1200px;
+     margin: auto;
+     text-align: center;
+ }
 
-}
+ .job-list-container h2 {
+     font-size: 30px;
+     margin-bottom: 30px;
+     color: var(--accent);
+     text-shadow: 0 0 6px rgba(0, 255, 213, 0.4);
+ }
 
-.job-list-container::before {
-    top: -100px;
-    right: -100px;
+ .job-cards {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 24px;
+ }
 
-}
+ .job-card {
+     background: var(--card-bg);
+     border: 1px solid var(--border-color);
+     border-radius: 16px;
+     padding: 25px;
+     box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     position: relative;
+ }
 
-.job-list-container::after {
-    bottom: -100px;
-    right: -100px;
-}
+ .job-card:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 0 24px rgba(0, 255, 255, 0.15);
+ }
 
+ .job-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 10px;
+ }
 
-.job-list-container h2 {
-    font-size: 34px;
-    background: linear-gradient(90deg, #00fff7, #ff00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 10px #00fff7;
-    margin-bottom: 40px;
-    z-index: 1;
-    position: relative;
-    margin-bottom: 40px;
-    ;
-}
+ .job-card h3 {
+     font-size: 20px;
+     margin: 0;
+     background: linear-gradient(90deg, #ff00d4, #00eaff);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-weight: 600;
+ }
 
-.job-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    z-index: 0;
-    position: relative;
-}
+ .bookmark {
+     cursor: pointer;
+     font-size: 18px;
+     color: var(--gray);
+     transition: transform 0.2s ease;
+ }
 
-.job-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
-    padding: 20px;
-    width: 320px;
-    box-shadow: 0 6px 20px rgba(0, 255, 247, 0.05);
-    border: 1px solid transparent;
+ .bookmark:hover {
+     transform: scale(1.2);
+ }
 
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0, 255, 247, 0.1);
-    backdrop-filter: blur(10px);
+ .bookmark.saved {
+     color: var(--accent);
+ }
 
+ .job-card p {
+     margin: 6px 0;
+     font-size: 14px;
+     color: var(--gray);
+     text-align: left;
+ }
 
-}
+ .job-card p strong {
+     color: var(--white);
+ }
 
-.job-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 255, 247, 0.2);
-    border-color: #00fff7;
-}
+ .posted-date {
+     font-style: italic;
+     font-size: 13px;
+     color: var(--light-gray);
+ }
 
-.job-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #ffffff;
+ .job-buttons {
+     display: flex;
+     justify-content: space-between;
+     gap: 10px;
+     margin-top: 18px;
+ }
 
-}
+ .job-buttons a {
+     text-decoration: none;
+     flex: 1;
+ }
 
-.job-card p {
-    margin: 6px 0;
-    font-size: 14px;
-    color: #cccccc;
-}
+ .btn-view,
+ .btn-apply {
+     padding: 10px 14px;
+     border: none;
+     font-size: 14px;
+     font-weight: 600;
+     border-radius: 8px;
+     cursor: pointer;
+     width: 100%;
+     transition: all 0.3s ease;
+ }
 
-.job-buttons {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 18px;
+ .btn-view {
+     background-color: transparent;
+     border: 1px solid var(--accent);
+     color: var(--accent);
+ }
 
-}
+ .btn-view:hover {
+     background-color: var(--accent);
+     color: var(--bg-dark);
+ }
 
-.job-buttons .btn-view,
-.job-buttons .btn-apply {
-    flex: 1;
-    padding: 10px 14px;
-    font-size: 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
+ .btn-apply {
+     background-color: var(--accent);
+     color: var(--bg-dark);
+ }
 
-.btn-view {
-    background-color: transparent;
-    color: #00fff7;
-    border: 2px solid #00fff7;
+ .btn-apply:hover {
+     background-color: var(--accent-hover);
+     color: var(--bg-dark);
+ }
 
-}
+ .no-results {
+     color: var(--gray);
+     font-size: 16px;
+     margin-top: 40px;
+ }
 
-.btn-view:hover {
-    background-color: #00fff7;
-    color: #0b0f13;
-    box-shadow: 0 4px 12px rgba(0, 255, 247, 0.4);
+ @media (max-width: 768px) {
+     .job-list-container {
+         padding: 20px;
+     }
 
-}
+     .job-list-container h2 {
+         font-size: 24px;
+     }
 
-.btn-apply {
-    background: linear-gradient(90deg, #00fff7, #ff00ff);
-    color: black;
-    border: 2px solid transparent;
-    box-shadow: 0 0 10px rgba(0, 255, 247, 0.3);
-}
-
-.btn-apply:hover {
-    background-color: #ff00ff;
-
-    transform: scale(1.03);
-}
-
-@media (max-width: 768px) {
-    .job-card {
-        width: 100%;
-
-    }
-
-    .job-buttons {
-        flex-direction: column;
-    }
-
-    .btn-view,
-    .btn-apply {
-        width: 100%;
-    }
-}
+     .job-buttons {
+         flex-direction: column;
+     }
+ }

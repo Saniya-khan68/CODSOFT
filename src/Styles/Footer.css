@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
+:root {
+  --bg-dark: #0a0a0a;
+  --primary-text: #ffffff;
+  --secondary-text: #cbd5e1;
+  --highlight: #38bdf8;
+  --accent: #8b5cf6;
+  --card-bg: #1e1e2e;
+}
+
 .footer {
-    background: linear-gradient( circle to  top left, #1e1b4b,#0f172a);
-    color: var(--text-primary);
+    background:  var(--bg-dark);
+    color: var(--primary-text);
     padding: 60px 20px 30px;
-    font-family: var(--font-main);
+    font-family:  'Poppins', sans-serif;
     position: relative;
     overflow: hidden;
-    border-top:1px solid rgba(255, 255, 255, 0.05)
+    border-top:1px solid rgba(255, 255, 255, 0.08)
 
 }
 
@@ -15,11 +24,11 @@
 .footer::after {
     content: '';
     position: absolute;
-     width: 400px;
-    height: 400px;
+     width: 350px;
+    height: 3500px;
     border-radius: 50%;
-    opacity: 0.15;
-    filter: blur(140px);
+    opacity: 0.08;
+    filter: blur(120px);
     z-index: 0;
      
 }
@@ -55,18 +64,39 @@
 .footer-logo {
     font-size: 24px;
     font-weight: 700;
-    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    background: linear-gradient(90deg,  var(--accent), #ec4899);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 8px rgba(139, 92, 246,0.4);
-    margin-bottom: 12px;
+     
+    margin-bottom: 10px;
 }
 
 .footer-desc {
     font-size: 14px;
-    color: var(--text-secondary);
+    color: var(--secondary-text);
     line-height: 1.6;
+    margin-bottom: 20px;
 
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  font-size: 18px;
+  color: var(--primary-text);
+  background: #2a2a3b;
+  padding: 8px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: var(--highlight);
+  color: #000;
 }
 
 .footer-links,
@@ -78,8 +108,8 @@
 .footer-links h4 .footer-contact h4 {
     font-size: 16px;
     margin-bottom: 12px;
-    color: #8b5cf6;
-    text-shadow: 0 0 6px rgba(139, 92, 246, 0.4)
+    color: var(--accent);
+    text-shadow: 0 0 6px rgba(139, 92, 246, 0.4);
 }
 
 .footer-links ul {
@@ -95,26 +125,26 @@
 }
 
 .footer-links a {
-    color: var(--text-secondary);
+    color: var(--secondary-text);
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #38bdf8;
-    text-shadow: 0 0 8px #38bdf8;
+    color: var(--highlight);
+    text-shadow: 0 0  6px var(--highlight);
 }
 
 .footer-contact p {
     font-size: 14px;
     margin-bottom: 6px;
-    color: var(--text-secondary);
+    color: var(--secondary-text);
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 24px;
+    padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 13px;
     color:  #94a3b8;
@@ -138,9 +168,9 @@
         min-width: 100%;
     }
 
-    .footer-logo {
-        font-size: 24px;
-    }
+     .social-icons{
+        justify-content: center;
+     }
 
     .footer-bottom {
         font-size: 12px;
