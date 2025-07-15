@@ -1,4 +1,4 @@
- .employer-jobs-container {
+.employer-jobs-container {
   padding: 40px;
 }
 
@@ -42,4 +42,41 @@
 .delete-btn {
   background-color: #dc3545;
   color: white;
+}
+ 
+
+@media (max-width: 768px) {
+  .employer-jobs-container {
+    padding: 30px 16px;
+  }
+
+  .job-card {
+    padding: 16px;
+  }
+
+  .job-card h3 {
+    font-size: 16px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .job-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+  }
 }

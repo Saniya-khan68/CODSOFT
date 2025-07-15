@@ -1,19 +1,26 @@
 .btn-view {
-    background-color: transparent;
-    border: 1px solid #00d9ff;
-    color: #00d9ff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background-color: transparent;
+  border: 1px solid #00d9ff;
+  color: #00d9ff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+  background-color: #00d9ff;
+  color: #000;
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+ 
+@media (max-width: 480px) {
+  .btn-view {
+    padding: 7px 14px;
+    font-size: 13px;
   }
-  
-  .btn-view:hover {
-    background-color: #00d9ff;
-    color: #000;
-    box-shadow: 0 0 8px rgba(0, 217, 255, 0.4);
-    transform: translateY(-2px);
-  }
-  
+}

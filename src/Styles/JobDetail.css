@@ -38,7 +38,6 @@ body::before {
   padding: 40px;
   background: var(--glass-bg);
   border: 1px solid rgba(0, 234, 255, 0.2);
-
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   font-family: 'Poppins', sans-serif;
@@ -86,7 +85,6 @@ strong {
 .apply-button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
-
 }
 
 .container {
@@ -105,4 +103,50 @@ strong {
 
 .shadowed {
   box-shadow: 0 0 10px rgba(0, 234, 255, 0.1);
+}
+ 
+@media (max-width: 768px) {
+  .job-detail-container {
+    padding: 30px 20px;
+    margin: 40px 16px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .apply-button {
+    font-size: 15px;
+    padding: 10px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-detail-container {
+    padding: 24px 16px;
+    margin: 30px 12px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .apply-button {
+    font-size: 14px;
+    padding: 9px 20px;
+    width: 100%;
+    text-align: center;
+  }
 }

@@ -1,7 +1,5 @@
- 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
- 
 :root {
   --black: #0e0e0e;
   --white: #ffffff;
@@ -27,20 +25,21 @@ body {
   min-height: 100vh;
 }
 
- 
+/* Layout Container */
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
 }
- 
+
+/* Headings */
 h1, h2, h3 {
   color: var(--accent);
   text-shadow: 0 0 6px var(--accent);
   margin-bottom: 20px;
 }
 
- 
+/* Buttons */
 button {
   padding: 10px 16px;
   font-size: 14px;
@@ -72,7 +71,7 @@ button {
   color: var(--black);
 }
 
- 
+/* Form Elements */
 input, textarea, select {
   width: 100%;
   padding: 12px;
@@ -84,13 +83,15 @@ input, textarea, select {
   font-size: 14px;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 6px var(--accent);
 }
 
- 
+/* Links */
 a {
   color: var(--primary);
   text-decoration: none;
@@ -101,12 +102,13 @@ a:hover {
   color: var(--white);
 }
 
- 
+/* Errors */
 .error-text {
   color: var(--danger);
   font-size: 13px;
 }
- 
+
+/* Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 15px;
