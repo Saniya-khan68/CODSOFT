@@ -1,4 +1,4 @@
- // ApplyForm.jsx
+ 
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/ApplyForm.css';
@@ -34,13 +34,13 @@ const ApplyForm = () => {
       appliedAt: new Date().toLocaleString(),
     };
 
-    // ✅ Save in applicationsByUser
+     
     const applicationsByUser = JSON.parse(localStorage.getItem('applicationsByUser')) || {};
     const userApplications = applicationsByUser[user.email] || [];
     applicationsByUser[user.email] = [...userApplications, newApplication];
     localStorage.setItem('applicationsByUser', JSON.stringify(applicationsByUser));
 
-    // ✅ Save in applicationsByJob
+     
     const applicationsByJob = JSON.parse(localStorage.getItem('applicationsByJob')) || {};
     const jobApplications = applicationsByJob[id] || [];
     applicationsByJob[id] = [...jobApplications, newApplication];

@@ -1,5 +1,6 @@
  import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import '../Styles/JobCard.css'
 
 const JobCard = (props) => {
   const {
@@ -43,7 +44,7 @@ const JobCard = (props) => {
           <button className="btn-view">View Details</button>
         </Link>
 
-        {/* ✅ Candidate-only: Apply Now */}
+        
         {!showActions && (
           <Link to={`/apply/${id}`}>
             <button className="btn-apply">Apply Now</button>

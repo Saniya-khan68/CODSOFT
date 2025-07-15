@@ -26,7 +26,7 @@ const JobList = ({ searchTerm = '', isEmployer = false }) => {
     }));
 
     setJobs([...publicJobs, ...ownJobs]);
-  }, []); // ✅ Only runs once on component mount
+  }, []);  
 
   const filteredJobs = jobs.filter((job) => {
     const matchSearch = searchTerm

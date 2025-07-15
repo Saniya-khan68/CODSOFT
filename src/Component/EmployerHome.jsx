@@ -12,7 +12,7 @@ const EmployerHome = ({ user }) => {
     { name: 'Full Stack', applications: 6 },
   ];
 
-  const totalJobs = 0; // Replace with actual value if needed
+  const totalJobs = 0; 
   const totalApplications = 12;
   const lastPosted = 'N/A';
 

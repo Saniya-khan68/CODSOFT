@@ -1,4 +1,4 @@
- /* ====== EmployerHome.css ====== */
+ 
 
 .employer-home {
   padding: 40px 20px;
@@ -111,7 +111,7 @@
   color: #ccc;
 }
 
-/* 📅 Calendar Styling Fixes */
+ 
 
 .react-calendar {
   width: 100% !important;

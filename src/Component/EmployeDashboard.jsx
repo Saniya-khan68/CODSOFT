@@ -45,7 +45,7 @@ const EmployerDashboard = ({ user }) => {
     allJobs[user.email] = updated;
     localStorage.setItem('jobsByEmployer', JSON.stringify(allJobs));
 
-    // Reload list
+     
     const combined = [
       ...updated.map(job => ({ ...job, isEditable: true })),
       ...postedJobs.filter(job => !job.isEditable)

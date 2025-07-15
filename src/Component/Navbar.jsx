@@ -40,13 +40,13 @@ const Navbar = ({ onSearch, isAuthenticated, setIsAuthenticated }) => {
     <nav className="navbar">
       <div className="navbar-container">
 
-        {/* Left: Logo */}
+        
         <div className="logo">
           <Link to="/" className="logo-link">JobBoard</Link>
           <span className="tagline">We Build Future</span>
         </div>
 
-        {/* Center: Nav links and search */}
+         
         {isAuthenticated && (
           <div className="navbar-links">
             <Link to="/" className="nav-link">Home</Link>
@@ -60,7 +60,7 @@ const Navbar = ({ onSearch, isAuthenticated, setIsAuthenticated }) => {
           </div>
         )}
 
-        {/* Right: Notification + Auth/Profile */}
+       
         <div className="right-section" ref={dropdownRef}>
           {isAuthenticated && (
             <Link to="/notifications" className="nav-link">🔔</Link>

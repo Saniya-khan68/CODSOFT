@@ -1,4 +1,4 @@
- // JobDetail.jsx
+ 
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import jobsData from '../assets/data/jobs.json';
@@ -32,7 +32,7 @@ const JobDetail = () => {
       <p><strong>Salary:</strong> {job.salary}</p>
       <p><strong>Description:</strong> {job.description}</p>
 
-      {/* ✅ Apply Button (Only for public jobs) */}
+      
       {!job.isLocal && (
         <Link to={`/apply/${job.id}`}>
           <button style={{

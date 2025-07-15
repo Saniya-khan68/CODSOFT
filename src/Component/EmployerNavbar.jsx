@@ -1,7 +1,7 @@
- // /Component/EmployerNavbar.js
+ 
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../Styles/EmployerNavbar.css'; // ✅ Custom CSS for Employer
+import '../Styles/EmployerNavbar.css';  
 
 const EmployerNavbar = ({ isAuthenticated, setIsAuthenticated }) => {
   const navigate = useNavigate();
