@@ -1,7 +1,7 @@
  
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import '../styles/ApplyForm.css';
+import '../Styles/ApplyForm.css';
 
 const ApplyForm = () => {
   const { id } = useParams();
