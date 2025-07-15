@@ -1,0 +1,176 @@
+ /* ====== EmployerHome.css ====== */
+
+.employer-home {
+  padding: 40px 20px;
+  color: #fff;
+  background: #0a0f1a;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  color: #00ffe1;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #111c2c;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: 2px solid #00cfff;
+}
+
+.dashboard-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: #121e30;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+  text-align: center;
+  flex: 1;
+  min-width: 180px;
+}
+
+.dashboard-actions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.action-card {
+  background-color: #101c2d;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+  cursor: pointer;
+  border: 1px solid #00cfff40;
+  transition: 0.3s;
+}
+
+.action-card:hover {
+  background-color: #0e192a;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.recent-jobs,
+.recent-applications,
+.notifications,
+.chart-section,
+.calendar-section {
+  margin-top: 40px;
+  background-color: #111c2c;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.recent-jobs h3,
+.recent-applications h3,
+.notifications h3,
+.chart-section h3,
+.calendar-section h3 {
+  color: #00cfff;
+  margin-bottom: 10px;
+}
+
+.recent-jobs ul,
+.recent-applications ul,
+.notifications ul {
+  padding-left: 20px;
+}
+
+.recent-jobs li,
+.recent-applications li,
+.notifications li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* 📅 Calendar Styling Fixes */
+
+.react-calendar {
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: #192b44 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  padding: 10px;
+}
+
+.react-calendar__navigation {
+  background-color: transparent !important;
+}
+
+.react-calendar__navigation button {
+  color: #00cfff !important;
+}
+
+.react-calendar__month-view__weekdays {
+  color: #00cfff !important;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.react-calendar__tile {
+  border-radius: 6px;
+  padding: 10px 5px;
+  background: none;
+  transition: 0.2s;
+}
+
+.react-calendar__tile--active {
+  background-color: #00cfff !important;
+  color: #000 !important;
+  border-radius: 6px;
+}
+
+.react-calendar__tile:hover {
+  background-color: #0f3a56 !important;
+  color: white !important;
+}
+
+.calendar-section {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  .dashboard-stats,
+  .dashboard-actions {
+    flex-direction: column;
+  }
+
+  .company-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}

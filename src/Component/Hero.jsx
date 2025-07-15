@@ -1,6 +1,8 @@
-  import React from 'react';
-import '../styles/Hero.css';
+ import React, { useEffect, useState } from 'react';
+import '../Styles/Hero.css';
 import { useNavigate } from 'react-router-dom';
+import jobsData from '../assets/data/jobs.json';
+import JobCard from './JobCard';
 
 const jobCategories = [
   { name: 'Frontend Development', path: '/jobs?category=frontend' },
@@ -13,43 +15,14 @@ const jobCategories = [
   { name: 'Cybersecurity', path: '/jobs?category=cybersecurity' }
 ];
 
-const featuredJobs = [
-  {
-    title: 'Frontend Developer',
-    company: 'TechNova',
-    location: 'Remote',
-    type: 'Full-Time',
-    logo: '🖥️',
-    tags: ['React', 'HTML', 'CSS']
-  },
-  {
-    title: 'Backend Engineer',
-    company: 'CodeVerse',
-    location: 'Bangalore, India',
-    type: 'Full-Time',
-    logo: '🛠️',
-    tags: ['Node.js', 'Express', 'MongoDB']
-  },
-  {
-    title: 'UI/UX Designer',
-    company: 'DesignHub',
-    location: 'Delhi, India',
-    type: 'Part-Time',
-    logo: '🎨',
-    tags: ['Figma', 'Adobe XD', 'Wireframes']
-  },
-  {
-    title: 'AI Researcher',
-    company: 'BrainWave AI',
-    location: 'Hyderabad',
-    type: 'Full-Time',
-    logo: '🧠',
-    tags: ['Python', 'TensorFlow', 'NLP']
-  },
-];
-
 const Hero = () => {
   const navigate = useNavigate();
+  const [featuredJobs, setFeaturedJobs] = useState([]);
+
+  useEffect(() => {
+    const data = jobsData.slice(0, 4);
+    setFeaturedJobs(data);
+  }, []);
 
   const handleExplore = () => {
     navigate('/jobs');
@@ -71,42 +44,26 @@ const Hero = () => {
         </button>
       </div>
 
-      {/* ======= Job Categories ======= */}
       <div className="job-category-section">
         <h2 className="section-title">Popular Job Categories</h2>
         <div className="job-categories">
           {jobCategories.map((cat, index) => (
-            <div key={index} className="category-card" onClick={() => handleCategoryClick(cat.path)}>
+            <div
+              key={index}
+              className="category-card"
+              onClick={() => handleCategoryClick(cat.path)}
+            >
               {cat.name}
             </div>
           ))}
         </div>
       </div>
 
-      {/* ======= Featured Jobs ======= */}
       <div className="featured-jobs-section">
         <h2 className="section-title">Featured Jobs</h2>
         <div className="job-cards">
           {featuredJobs.map((job, index) => (
-            <div key={index} className="job-card">
-              <div className="job-header">
-                <span className="job-logo">{job.logo}</span>
-                <div>
-                  <h3>{job.title}</h3>
-                  <p>{job.company}</p>
-                  <p>{job.location}</p>
-                </div>
-              </div>
-              <div className="job-tags">
-                {job.tags.map((tag, i) => (
-                  <span key={i} className="tag">{tag}</span>
-                ))}
-              </div>
-              <div className="job-footer">
-                <span className="job-type">{job.type}</span>
-                <button className="apply-btn">Apply Now</button>
-              </div>
-            </div>
+            <JobCard key={job.id || index} {...job} />
           ))}
         </div>
       </div>
